@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/lecture01_basics.dir/main.cpp.o CMakeFiles/lecture01_basics.dir/funk.cpp.o CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o -o lecture01_basics 

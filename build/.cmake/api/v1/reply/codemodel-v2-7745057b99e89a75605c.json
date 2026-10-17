@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lecture01_basics",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lecture01_basics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lecture01_basics-Debug-53732f2f8a77f8d5c7d3.json",
+					"name" : "lecture01_basics",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/noah/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/GitHub/my-cpp-project/build",
+		"source" : "/home/noah/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/GitHub/my-cpp-project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

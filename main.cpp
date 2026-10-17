@@ -8,20 +8,14 @@
 using std::cout;
 using std::string;
 using std::endl;
+using std::numeric_limits;
+using std::boolalpha;
 
-void printTitle (const string& text){
-cout << "============================================" << endl;
-cout << text << endl;
-cout << "============================================" << endl << endl;
-}
+
 
 void printStr (const string& text){
 cout<<"----"<<text<<"----------------------" << endl;
 } 
-
-void printBlank() {
-     cout << endl;
-}
 
 
 int main(){
@@ -131,7 +125,7 @@ int main(){
 
     printBlank();
 
-    bool c1 = true
+    bool c1 = true;
     bool c2 = false;
     cout << "  И (c1 && c2): " << (c1 && c2) << endl;
     cout << "  ИЛИ (c1||c2): " << (c1||c2) << endl;

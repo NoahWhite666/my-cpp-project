@@ -1,3 +1,6 @@
+#include "labaratornaya2.hpp"
+#include "funk.hpp"
+
 #include <iostream>
 #include <string>
 using std::cout;
@@ -5,21 +8,11 @@ using std::string;
 using std::cin;
 using std::endl;
 
-void printTitle1(const string& text) {
-    cout << endl <<"========================================"<< endl;
-    cout << text << endl;
-    cout << "========================================"<< endl << endl;
-}
-
-void printBlank1() {
-    cout << endl;
-}
 
 
-
-void task2() {
+void task1() {
    
-    printTitle1("1. ПОИСК МИН. И МАКС. ЧИСЛА");
+    printTitle("1. ПОИСК МИН. И МАКС. ЧИСЛА");
 
     int n=0;
     int x=0;
@@ -43,9 +36,9 @@ void task2() {
     cout << "Минимум: " << minVal << endl;
     cout << "Максимум: " << maxVal << endl;
 
-    printBlank1();
+    printBlank();
 
-   printTitle1("2. ОПРЕДЕЛЕНИЕ ПРОСТОТЫ ЧИСЛА");
+   printTitle("2. ОПРЕДЕЛЕНИЕ ПРОСТОТЫ ЧИСЛА");
 
     int num=0;
     cout << "Число: ";
@@ -64,9 +57,9 @@ void task2() {
         cout << "Не простое"<< endl;
     }
 
-    printBlank1();
+    printBlank();
 
-   printTitle1("3. РАСПАКОВКА НАТУРАЛЬНОГО ЧИСЛА");
+   printTitle("3. РАСПАКОВКА НАТУРАЛЬНОГО ЧИСЛА");
 
     int val=0;
     cout << "Число: ";
@@ -78,11 +71,6 @@ void task2() {
         val /= 10;
     }
 
-    printBlank1();
-    printBlank1();
-}
-
-int main() {
-    task2();
-    return 0;
+    printBlank();
+    printBlank();
 }
