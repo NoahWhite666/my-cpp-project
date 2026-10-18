@@ -15,11 +15,11 @@ void task1() {
     printTitle("1. ПОИСК МИН. И МАКС. ЧИСЛА");
 
     int n=0;
-    int x=0;
     cout << "Количество чисел: ";
     cin >> n;
 
     cout << "Число: ";
+    int x=0;
     cin >> x;
     int minVal = x;
     int maxVal = x;
