@@ -123,6 +123,8 @@ CMakeFiles/lecture01_basics.dir/main.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
  /home/noah/Документы/GitHub/my-cpp-project/labaratornaya2.hpp \
+ /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.hpp \
+ /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.hpp \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \

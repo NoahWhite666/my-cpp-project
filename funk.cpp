@@ -1,17 +1,26 @@
 #include "funk.hpp"
-
 #include <iostream>
 
-void print(std::string s, size_t l) {
-    std::cerr << "MSG " << s << " " << l << std::endl;
-}
+using std::cout;
+using std::endl;
+using std::string;
 
-void printTitle(const std::string& text) {
-    std::cout << "============================================" << std::endl;
-    std::cout << text << std::endl;
-    std::cout << "============================================" << std::endl << std::endl;
+void printTitle(const string& text) {
+    cout << "============================================" << endl;
+    cout << text << endl;
+    cout << "============================================" << endl << endl;
 }
 
 void printBlank() {
-    std::cout << std::endl;
+    cout << endl;
 }
+
+void printBigTitle(const string& text) {
+    cout << "=============-----------------==============" << endl;
+    cout << text << endl;
+    cout << "=============-----------------==============" << endl << endl;
+}
+
+void printStr (const string& text){
+cout<<"----"<<text<<"----------------------" << endl;
+} 

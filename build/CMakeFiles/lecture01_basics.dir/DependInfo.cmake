@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/noah/Документы/GitHub/my-cpp-project/funk.cpp" "CMakeFiles/lecture01_basics.dir/funk.cpp.o" "gcc" "CMakeFiles/lecture01_basics.dir/funk.cpp.o.d"
   "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya2.cpp" "CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o" "gcc" "CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o.d"
+  "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp" "CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o" "gcc" "CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o.d"
+  "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp" "CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o" "gcc" "CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o.d"
   "/home/noah/Документы/GitHub/my-cpp-project/main.cpp" "CMakeFiles/lecture01_basics.dir/main.cpp.o" "gcc" "CMakeFiles/lecture01_basics.dir/main.cpp.o.d"
   )
 

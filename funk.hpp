@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
 
-void print(std::string s = __FILE__, size_t l = __LINE__);
+using std::string;
 
-// Печатает заголовок, обрамлённый линиями.
-void printTitle(const std::string& text);
+void printTitle(const string& text);
 
-// Печатает пустую строку.
 void printBlank();
+
+void printBigTitle(const string& text);
+
+void printStr (const string& text);

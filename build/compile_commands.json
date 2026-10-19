@@ -16,5 +16,17 @@
   "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o -c /home/noah/Документы/GitHub/my-cpp-project/labaratornaya2.cpp",
   "file": "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya2.cpp",
   "output": "CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o"
+},
+{
+  "directory": "/home/noah/Документы/GitHub/my-cpp-project/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o -c /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp",
+  "file": "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp",
+  "output": "CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o"
+},
+{
+  "directory": "/home/noah/Документы/GitHub/my-cpp-project/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o -c /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp",
+  "file": "/home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp",
+  "output": "CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o"
 }
 ]

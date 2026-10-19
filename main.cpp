@@ -1,5 +1,7 @@
 #include "funk.hpp"
 #include "labaratornaya2.hpp"
+#include "labaratornaya3.hpp"
+#include "labaratornaya4.hpp"
 
 #include <iostream>
 #include <string>
@@ -13,13 +15,9 @@ using std::boolalpha;
 
 
 
-void printStr (const string& text){
-cout<<"----"<<text<<"----------------------" << endl;
-} 
-
-
 int main(){
 
+     printBigTitle("....ЛАБАРАТОРНАЯ №1....");
     printTitle("1. ТИПЫ ДАННЫХ В C++, МИН. И МАКС. ЗНАЧЕНИЯ");
 
     printStr("1.1 Логический тип");
@@ -132,5 +130,10 @@ int main(){
     cout << "  НЕ (!c1): " << (!c1) << endl;
 
     task1();
+    task2();
+    task3();
+    task4();
+    task5();
+    task6();
     return 0;
 }

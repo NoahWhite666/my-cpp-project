@@ -111,11 +111,41 @@ CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noah/Документы/GitHub/my-cpp-project/labaratornaya2.cpp -o CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.s
 
+CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o: CMakeFiles/lecture01_basics.dir/flags.make
+CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o: /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp
+CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o: CMakeFiles/lecture01_basics.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/noah/Документы/GitHub/my-cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o -MF CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o.d -o CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o -c /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp
+
+CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp > CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.i
+
+CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noah/Документы/GitHub/my-cpp-project/labaratornaya3.cpp -o CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.s
+
+CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o: CMakeFiles/lecture01_basics.dir/flags.make
+CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o: /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp
+CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o: CMakeFiles/lecture01_basics.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/noah/Документы/GitHub/my-cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o -MF CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o.d -o CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o -c /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp
+
+CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp > CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.i
+
+CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noah/Документы/GitHub/my-cpp-project/labaratornaya4.cpp -o CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.s
+
 # Object files for target lecture01_basics
 lecture01_basics_OBJECTS = \
 "CMakeFiles/lecture01_basics.dir/main.cpp.o" \
 "CMakeFiles/lecture01_basics.dir/funk.cpp.o" \
-"CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o"
+"CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o" \
+"CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o" \
+"CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o"
 
 # External object files for target lecture01_basics
 lecture01_basics_EXTERNAL_OBJECTS =
@@ -123,9 +153,11 @@ lecture01_basics_EXTERNAL_OBJECTS =
 lecture01_basics: CMakeFiles/lecture01_basics.dir/main.cpp.o
 lecture01_basics: CMakeFiles/lecture01_basics.dir/funk.cpp.o
 lecture01_basics: CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.o
+lecture01_basics: CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o
+lecture01_basics: CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o
 lecture01_basics: CMakeFiles/lecture01_basics.dir/build.make
 lecture01_basics: CMakeFiles/lecture01_basics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/noah/Документы/GitHub/my-cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable lecture01_basics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/noah/Документы/GitHub/my-cpp-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable lecture01_basics"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lecture01_basics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

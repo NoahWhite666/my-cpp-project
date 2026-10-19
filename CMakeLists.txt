@@ -9,4 +9,4 @@ project("${PROJECT_NAME}")           # установить имя проект�
 set(CMAKE_CXX_STANDARD 20)			 # устанавливаем 20 стандарт языка
 
 # Сказать программе, что должен быть исполняемый файл
-add_executable("${PROJECT_NAME}" main.cpp funk.cpp funk.hpp labaratornaya2.cpp labaratornaya2.hpp)
+add_executable("${PROJECT_NAME}" main.cpp funk.cpp funk.hpp labaratornaya2.cpp labaratornaya2.hpp labaratornaya3.cpp labaratornaya3.hpp labaratornaya4.cpp labaratornaya4.hpp)

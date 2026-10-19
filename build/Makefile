@@ -177,6 +177,54 @@ labaratornaya2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya2.cpp.s
 .PHONY : labaratornaya2.cpp.s
 
+labaratornaya3.o: labaratornaya3.cpp.o
+.PHONY : labaratornaya3.o
+
+# target to build an object file
+labaratornaya3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.o
+.PHONY : labaratornaya3.cpp.o
+
+labaratornaya3.i: labaratornaya3.cpp.i
+.PHONY : labaratornaya3.i
+
+# target to preprocess a source file
+labaratornaya3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.i
+.PHONY : labaratornaya3.cpp.i
+
+labaratornaya3.s: labaratornaya3.cpp.s
+.PHONY : labaratornaya3.s
+
+# target to generate assembly for a file
+labaratornaya3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya3.cpp.s
+.PHONY : labaratornaya3.cpp.s
+
+labaratornaya4.o: labaratornaya4.cpp.o
+.PHONY : labaratornaya4.o
+
+# target to build an object file
+labaratornaya4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.o
+.PHONY : labaratornaya4.cpp.o
+
+labaratornaya4.i: labaratornaya4.cpp.i
+.PHONY : labaratornaya4.i
+
+# target to preprocess a source file
+labaratornaya4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.i
+.PHONY : labaratornaya4.cpp.i
+
+labaratornaya4.s: labaratornaya4.cpp.s
+.PHONY : labaratornaya4.s
+
+# target to generate assembly for a file
+labaratornaya4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lecture01_basics.dir/build.make CMakeFiles/lecture01_basics.dir/labaratornaya4.cpp.s
+.PHONY : labaratornaya4.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -216,6 +264,12 @@ help:
 	@echo "... labaratornaya2.o"
 	@echo "... labaratornaya2.i"
 	@echo "... labaratornaya2.s"
+	@echo "... labaratornaya3.o"
+	@echo "... labaratornaya3.i"
+	@echo "... labaratornaya3.s"
+	@echo "... labaratornaya4.o"
+	@echo "... labaratornaya4.i"
+	@echo "... labaratornaya4.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
