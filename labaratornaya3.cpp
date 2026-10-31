@@ -76,10 +76,13 @@ void task2() {
     cout << "Количество чисел: ";
     cin >> n;
 
+    printBlank();
+
     cout << "Числа: ";
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
+
 
     bool estOdinakovye = false;
     for (int i = 0; i < n; i++) {
@@ -100,12 +103,14 @@ void task2() {
         }
     }
 
+    printBlank();
+
     cout << "Результат: ";
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
     }
-    cout << endl;
 
+    printBlank();
     printBlank();
 }
 
@@ -121,10 +126,14 @@ void task3() {
     cout << "Количество чисел: ";
     cin >> n;
 
+        printBlank();
+
     cout << "Числа: ";
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
+
+    printBlank();
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
@@ -136,11 +145,12 @@ void task3() {
         }
     }
 
+
     cout << "Результат: ";
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
     }
-    cout << endl;
+    printBlank();
 
     printBlank();
 }
@@ -158,12 +168,16 @@ void task4() {
     cout << "Строк и столбцов: ";
     cin >> n >> m;
 
-    cout << "Матрица: " << endl;
+        printBlank();
+
+    cout << "Матрица: ";
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cin >> a[i][j];
         }
     }
+
+        printBlank();
 
     int maxSum = 0;
     int maxI = 0;
@@ -182,12 +196,12 @@ void task4() {
         a[maxI][j] = a[maxI][j] + 1;
     }
 
-    cout << "Матрица после изменения: " << endl;
+    cout << "Матрица после изменения: ";
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cout << a[i][j] << " ";
         }
-        cout << endl;
+        printBlank();
     }
 
     printBlank();
@@ -205,10 +219,14 @@ void task5() {
     cout << "Количество чисел: ";
     cin >> n;
 
+        printBlank();
+
     cout << "Числа: ";
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
+
+    printBlank();
 
     int kol = 0;
     for (int i = 0; i < n; i++) {
@@ -235,7 +253,7 @@ void task5() {
     for (int i = 0; i < kol; i++) {
         cout << a[i] << " ";
     }
-    cout << endl;
-
+    
+    printBlank();
     printBlank();
 }

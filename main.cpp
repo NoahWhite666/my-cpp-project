@@ -13,8 +13,6 @@ using std::endl;
 using std::numeric_limits;
 using std::boolalpha;
 
-
-
 int main(){
 
      printBigTitle("....ЛАБАРАТОРНАЯ №1....");
@@ -23,7 +21,7 @@ int main(){
     printStr("1.1 Логический тип");
     cout << "bool:" << endl;
     cout << "  Размер: " << sizeof(bool) << " байт " << endl;
-    cout << "  Мин: " << false << " | Макс: " << true << endl;
+    cout << "  Мин: " << false << " | Макс: " << true <<endl;
 
     printBlank();
 
