@@ -12,7 +12,7 @@ using std::endl;
 
 void task1() {
 
-    printBigTitle("....ЛАБАРАТОРНАЯ №2....");
+   /* printBigTitle("....ЛАБАРАТОРНАЯ №2....");
     printTitle("1. ПОИСК МИН. И МАКС. ЧИСЛА");
 
     int n=0;
@@ -74,4 +74,5 @@ void task1() {
 
     printBlank();
     printBlank();
+    */
 }

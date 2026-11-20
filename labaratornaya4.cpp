@@ -10,37 +10,13 @@ void task6() {
 
     printBigTitle("....ЛАБАРАТОРНАЯ №4....");
     printTitle("УСТАНОВИТЬ i-ЫЙ БИТ ЧИСЛА В 1");
-
-    int x = 0;
-    cout << "Введите число х (0 < х < 10^9): ";
+    printBlank();
+    
+    cout <<"Введите x и номер бита i: ";
+    int x;
+    int i;                     // объявляем число x и номер бита i
     cin >> x;
-
-        printBlank();
-
-    int i = 0;
-    cout << "Введите номер бита i: ";
-    cin >> i;
-
-        printBlank();
-
-    cout << "Число до: ";
-    for (int b = 30; b >= 0; b = b - 1) {
-        cout << ((x >> b) & 1);
-    }
-
-    int maska = 1 << i;
-    x = x | maska;
-
-    printBlank();
-
-    cout << "Число после: ";
-    for (int b = 30; b >= 0; b = b - 1) {
-        cout << ((x >> b) & 1);
-    }
-
-    printBlank();
-
-    cout << "Результат: " << x << endl;
-
-    printBlank();
+    cin >> i;                // считываем оба числа с клавиатуры
+    x = x | (1 << i);             // 1 << i ставит единицу в i-й бит, а | переносит её в число x
+    cout << " Ответ: " << x << endl; // выводим получившееся число
 }

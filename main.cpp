@@ -15,6 +15,7 @@ using std::boolalpha;
 
 int main(){
 
+  /*   
      printBigTitle("....ЛАБАРАТОРНАЯ №1....");
     printTitle("1. ТИПЫ ДАННЫХ В C++, МИН. И МАКС. ЗНАЧЕНИЯ");
 
@@ -126,12 +127,13 @@ int main(){
     cout << "  И (c1 && c2): " << (c1 && c2) << endl;
     cout << "  ИЛИ (c1||c2): " << (c1||c2) << endl;
     cout << "  НЕ (!c1): " << (!c1) << endl;
-
-    task1();
+*/
+    //task1();
     task2();
     task3();
     task4();
     task5();
     task6();
+    
     return 0;
 }

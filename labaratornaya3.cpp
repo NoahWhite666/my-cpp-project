@@ -1,259 +1,171 @@
-#include "labaratornaya3.hpp"
+ #include "labaratornaya3.hpp"
 #include "funk.hpp"
 
 #include <iostream>
+#include <utility>                // нужно для команды swap (поменять местами)
 using std::cout;
 using std::cin;
 using std::endl;
+using std::swap;
 
-bool vseCifryRavny(int x) {
-    int poslednyayaCifra = x % 10;
-    int y = x / 10;
-    bool odinakovye = true;
-    while (y > 0) {
-        if (y % 10 != poslednyayaCifra) {
-            odinakovye = false;
-        }
-        y = y / 10;
+// 1. Считает сумму цифр числа
+int summa(int x) {
+    int s = 0;                    // сюда складываем цифры
+    while (x > 0) {               // пока в числе ещё остались цифры
+        s += x % 10;              // берём последнюю цифру и прибавляем к сумме
+        x /= 10;                  // отрезаем последнюю цифру
     }
-    return odinakovye;
+    return s;                     // отдаём готовую сумму
 }
 
-int summaCifr(int x) {
-    int s = 0;
-    while (x > 0) {
-        s = s + x % 10;
-        x = x / 10;
-    }
-    return s;
-}
-
+// 2. Ищет самую большую цифру в числе
 int maxCifra(int x) {
-    int m = 0;
-    while (x > 0) {
-        int d = x % 10;
-        if (d > m) {
-            m = d;
-        }
-        x = x / 10;
+    int m = 0;                    // сюда запишем рекордную цифру
+    while (x > 0) {               // пока есть цифры
+        if (x % 10 > m) m = x % 10; // если последняя цифра больше рекорда — обновляем рекорд
+        x /= 10;                  // отрезаем последнюю цифру
     }
-    return m;
+    return m;                     // отдаём максимум
 }
 
-bool nadoPostavitPosle(int a, int b) {
-    int sa = summaCifr(a);
-    int sb = summaCifr(b);
-    if (sa != sb) {
-        return sa > sb;
+// 3. Проверяет, все ли цифры в числе одинаковые (например, 777 -> да)
+bool vseRavny(int x) {
+    int c = x % 10;               // запоминаем последнюю цифру как образец
+    while (x > 0) {               // проверяем остальные цифры
+        if (x % 10 != c) return false; // нашли не такую — сразу выходим с ответом «нет»
+        x /= 10;                  // отрезаем проверенную цифру
     }
-    int ma = maxCifra(a);
-    int mb = maxCifra(b);
-    if (ma != mb) {
-        return ma > mb;
-    }
-    return a > b;
+    return true;                  // все совпали — ответ «да»
 }
 
-bool etoPalindrom(int x) {
-    int y = x;
-    int obratno = 0;
-    while (y > 0) {
-        obratno = obratno * 10 + y % 10;
-        y = y / 10;
+// 4. Проверяет, палиндром ли число (читается одинаково туда и обратно, например 121)
+bool palindrom(int x) {
+    int y = x;                    // делаем копию, чтобы не испортить сам x
+    long long rev = 0;            // здесь соберём перевёрнутое число (long long — чтобы не переполнилось)
+    while (y > 0) {               // пока в копии есть цифры
+        rev = rev * 10 + y % 10;  // дописываем последнюю цифру в конец перевёрнутого числа
+        y /= 10;                  // отрезаем её у копии
     }
-    return obratno == x;
+    return rev == x;              // если перевёрнутое совпало с исходным — это палиндром
 }
 
+// 5. Правило сравнения для 2-го задания: надо ли менять числа a и b местами?
+bool nadoMenyat(int a, int b) {
+    if (summa(a) != summa(b)) return summa(a) > summa(b);             // 1) сначала смотрим сумму цифр
+    if (maxCifra(a) != maxCifra(b)) return maxCifra(a) > maxCifra(b); // 2) если равны — макс. цифру
+    return a > b;                                                     // 3) если и тут равны — сами числа
+}
 
+// --- САМИ ЗАДАНИЯ ---
+
+// ЗАДАНИЕ 1: отсортировать по убыванию, если НЕТ чисел из одинаковых цифр
 void task2() {
-    printBigTitle("....ЛАБАРАТОРНАЯ №3....");
-    printTitle("ЗАДАНИЕ 1. СОРТИРОВКА ПО НЕВОЗРАСТАНИЮ");
+     printTitle("ЗАДАНИЕ 1. СОРТИРОВКА ПО УБЫВАНИЮ");
+    int n, a[10000];                        // n — сколько чисел, a — сам массив
+    cout << "Введите n и числа: ";
+    cin >> n;                               // вводим количество
+    for (int i = 0; i < n; i++) cin >> a[i]; // вводим числа в массив
 
-    const int MAXN = 10000;
-    int a[MAXN];
+    bool est = false;                       // флаг: нашли ли число с одинаковыми цифрами
+    for (int i = 0; i < n; i++)             // проходим по всем числам
+        if (vseRavny(a[i])) est = true;     // если хоть одно такое есть — поднимаем флаг
 
-    int n = 0;
-    cout << "Количество чисел: ";
-    cin >> n;
-
-    printBlank();
-
-    cout << "Числа: ";
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-
-
-    bool estOdinakovye = false;
-    for (int i = 0; i < n; i++) {
-        if (vseCifryRavny(a[i])) {
-            estOdinakovye = true;
-        }
-    }
-
-    if (estOdinakovye == false) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (a[j] < a[j + 1]) {
-                    int t = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = t;
+    if (!est) {                             // если таких чисел НЕ было — сортируем
+        for (int end = n; end > 1; end--) { // сужаем правую границу после каждого прохода
+            bool sw = false;                // флаг: были ли обмены на этом проходе
+            for (int i = 1; i < end; i++) { // сравниваем соседние пары
+                if (a[i - 1] < a[i]) {      // если левое меньше правого (нам надо от большего к меньшему)
+                    swap(a[i - 1], a[i]);   // меняем их местами
+                    sw = true;              // отмечаем, что обмен был
                 }
             }
+            if (!sw) break;                 // обменов не было — всё уже на местах, выходим
         }
     }
 
-    printBlank();
-
-    cout << "Результат: ";
-    for (int i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
-
-    printBlank();
-    printBlank();
+    for (int i = 0; i < n; i++) cout << a[i] << " "; // печатаем результат
+    cout << endl;                         // пустая строка для отступа
 }
-
-
 void task3() {
-
     printTitle("ЗАДАНИЕ 2. СОРТИРОВКА ПО СУММЕ ЦИФР, ПО МАКСИМАЛЬНОЙ ЦИФРЕ И ПО ЧИСЛУ");
+    int n, a[1000];                         // количество и массив на 1000 чисел
+    cout << "Задание 2. Введите n и числа: ";
+    cin >> n;                               // вводим количество
+    for (int i = 0; i < n; i++) cin >> a[i]; // вводим массив
 
-    const int MAXN = 1000;
-    int a[MAXN];
-
-    int n = 0;
-    cout << "Количество чисел: ";
-    cin >> n;
-
-        printBlank();
-
-    cout << "Числа: ";
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-
-    printBlank();
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n - 1 - i; j++) {
-            if (nadoPostavitPosle(a[j], a[j + 1])) {
-                int t = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = t;
+    for (int end = n; end > 1; end--) {     // тот же оптимизированный пузырёк
+        bool sw = false;                    // были ли обмены
+        for (int i = 1; i < end; i++) {     // идём по парам соседей
+            if (nadoMenyat(a[i - 1], a[i])) { // спрашиваем у помощника №5, надо ли менять местами
+                swap(a[i - 1], a[i]);       // меняем местами
+                sw = true;                  // отмечаем обмен
             }
         }
+        if (!sw) break;                     // если обменов не было — готово
     }
 
-
-    cout << "Результат: ";
-    for (int i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
-    printBlank();
-
-    printBlank();
+    for (int i = 0; i < n; i++) cout << a[i] << " "; // печатаем результат
+    cout << endl;
 }
 
-
+// ЗАДАНИЕ 3: найти строку матрицы с самой большой суммой и прибавить к ней 1
 void task4() {
+    printTitle("ЗАДАНИЕ 3. НАЙТИ СТРОКУ С САМОЙ БОЛЬШОЙ СУММОЙ И ПРИБАВИТЬ К НЕЙ 1");
+    int n, m, a[100][100];                  // n строк, m столбцов, матрица
+    cout << "Задание 3. Введите n, m и матрицу:";
+    cin >> n >> m;                          // вводим размеры
+    for (int i = 0; i < n; i++)             // цикл по строкам
+        for (int j = 0; j < m; j++)         // цикл по столбцам
+            cin >> a[i][j];                 // вводим каждое число матрицы
 
-    printTitle("ЗАДАНИЕ 3. СТРОКА С НАИБОЛЬШЕЙ СУММОЙ ЭЛЕМЕНТОВ");
-
-    const int MAXN = 100;
-    int a[MAXN][MAXN];
-
-    int n = 0;
-    int m = 0;
-    cout << "Строк и столбцов: ";
-    cin >> n >> m;
-
-        printBlank();
-
-    cout << "Матрица: ";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cin >> a[i][j];
+    int maxSum = 0, maxRow = 0;             // лучшая сумма и номер лучшей строки
+    for (int i = 0; i < n; i++) {           // проверяем каждую строку по очереди
+        int s = 0;                          // сумма текущей строки (с нуля!)
+        for (int j = 0; j < m; j++) s += a[i][j]; // складываем все элементы этой строки
+        if (i == 0 || s > maxSum) {         // 0-ю строку берём сразу, остальные сравниваем с лучшей
+            maxSum = s;                     // запоминаем новую лучшую сумму
+            maxRow = i;                     // запоминаем номер этой строки
         }
     }
 
-        printBlank();
+    for (int j = 0; j < m; j++) a[maxRow][j]++; // прибавляем 1 к каждому элементу найденной строки
 
-    int maxSum = 0;
-    int maxI = 0;
-    for (int i = 0; i < n; i++) {
-        int s = 0;
-        for (int j = 0; j < m; j++) {
-            s = s + a[i][j];
-        }
-        if (i == 0 || s > maxSum) {
-            maxSum = s;
-            maxI = i;
-        }
+    for (int i = 0; i < n; i++) {           // выводим матрицу обратно
+        for (int j = 0; j < m; j++) cout << a[i][j] << " ";
+        cout << endl;                       // переходим на следующую строчку таблицы
     }
-
-    for (int j = 0; j < m; j++) {
-        a[maxI][j] = a[maxI][j] + 1;
-    }
-
-    cout << "Матрица после изменения: ";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cout << a[i][j] << " ";
-        }
-        printBlank();
-    }
-
-    printBlank();
+    cout << endl;
 }
 
-
+// ЗАДАНИЕ 4: удалить числа с суммой цифр 10, а палиндромы продублировать (в одном массиве)
 void task5() {
+    printTitle("ЗАДАНИЕ 4. УДАЛЕНИЕ ЧИСЕЛ С СУММОЙ ЦИФР 10, ПОЛУЧЕНИЕ ПАЛИНДРОМОВ");
+    int n, a[20000];                        // запас 20000, вдруг продублируются все 10000 чисел
+    cout << "Задание 4. Введите n и числа: ";
+    cin >> n;                               // вводим количество
+    for (int i = 0; i < n; i++) cin >> a[i]; // вводим массив
 
-    printTitle("ЗАДАНИЕ 4. УДАЛЕНИЕ И ДУБЛИРОВАНИЕ ЭЛЕМЕНТОВ (ОДИН МАССИВ)");
-
-    const int MAXN = 20000;
-    int a[MAXN];
-
-    int n = 0;
-    cout << "Количество чисел: ";
-    cin >> n;
-
-        printBlank();
-
-    cout << "Числа: ";
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-
-    printBlank();
-
-    int kol = 0;
-    for (int i = 0; i < n; i++) {
-        if (summaCifr(a[i]) != 10) {
-            a[kol] = a[i];
-            kol = kol + 1;
+    // Шаг 1: удаление (просто переписываем нужные числа поверх старых)
+    int k = 0;                              // новая длина массива после удаления
+    for (int i = 0; i < n; i++) {           // смотрим на каждое старое число
+        if (summa(a[i]) != 10) {            // если сумма цифр НЕ 10 — число нам подходит
+            a[k] = a[i];                    // кладём его в начало массива
+            k++;                            // новая длина выросла на 1
         }
     }
 
-    int i = 0;
-    while (i < kol) {
-        if (etoPalindrom(a[i])) {
-            for (int j = kol; j > i + 1; j--) {
+    // Шаг 2: дублирование палиндромов
+    int i = 0;                              // начинаем с первого элемента
+    while (i < k) {                         // пока не дошли до нового конца массива
+        if (palindrom(a[i])) {              // если попался палиндром
+            for (int j = k; j > i + 1; j--) // двигаем весь хвост вправо (строго с конца!)
                 a[j] = a[j - 1];
-            }
-            a[i + 1] = a[i];
-            kol = kol + 1;
-            i = i + 2;
+            a[i + 1] = a[i];                // в освободившееся место ставим копию
+            k++;                            // массив стал длиннее на 1
+            i += 2;                         // перепрыгиваем и оригинал, и его новую копию
         } else {
-            i = i + 1;
+            i++;                            // не палиндром — просто идём к следующему числу
         }
     }
-
-    for (int i = 0; i < kol; i++) {
-        cout << a[i] << " ";
-    }
-    
-    printBlank();
-    printBlank();
+cout << endl;
 }
